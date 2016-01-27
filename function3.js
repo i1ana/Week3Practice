@@ -59,18 +59,31 @@ argument and removes all 'm' characters from the string*/
 /* 6. Write a function called 'printObject' which takes a single object argument 
 and console.log's each key-value pair in the format key is value on separate lines. */ 
 
-var printObject = function (obj){
+// var printObject = function (obj){
 
-	for (key in obj){
-		console.log(key+" is "+obj[key]);
-	}
-}
+// 	for (key in obj){
+// 		console.log(key+" is "+obj[key]);
+// 	}
+// }
 
-printObject({ firstname: 'refus', lastname: 'dingleberry' });
+// printObject({ firstname: 'refus', lastname: 'dingleberry' });
 
 /* 7. Write a function called 'vowels' which takes a string and returns 
 an array of all the vowels in the string, including duplicates. */
 
 
+var vowels = function (str){
+	var myArray = new Array();
+	str = str.toLowerCase();
+	var vowelList = "aeiou";
 
+	for (pos in str){
+		letter = str[pos]
+		if (vowelList.indexOf(letter)!=-1)
+			myArray.push(letter);
+	}
+	return myArray;
+}
+
+console.log(vowels('What evil odd ducks!'));
 
