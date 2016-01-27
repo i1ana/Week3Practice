@@ -34,7 +34,15 @@ var students = [{
 
 // 3. 
 for(var i=0; i<students.length; i++) {
-	if(students.city = Boulder){
- 		console.log(students[i].name + " is from " + "Boulder" in students );
+	if(students[i].city == 'Boulder'){
+ 		console.log(students[i].name + " is from Boulder");
  	}
 }
+
+//4. 
+
+// for(var i=0; i<students.length; i++) {
+// 	if(students[i].age > 25){
+//  		console.log(students[i].name + " is older than 25");
+//  	}
+// }
