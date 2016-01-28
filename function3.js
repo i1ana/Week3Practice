@@ -72,20 +72,78 @@ and console.log's each key-value pair in the format key is value on separate lin
 an array of all the vowels in the string, including duplicates. */
 
 
-var vowels = function (str){
-	var myArray = new Array();
-	str = str.toLowerCase();
-	var vowelList = "aeiou";
+// var vowels = function (str){
+// 	var myArray = new Array();
+// 	str = str.toLowerCase();
+// 	var vowelList = "aeiou";
 
-	for (pos in str){
-		letter = str[pos]
-		if (vowelList.indexOf(letter)!=-1)
-			myArray.push(letter);
+// 	for (pos in str){
+// 		letter = str[pos]
+// 		if (vowelList.indexOf(letter)!=-1)
+// 			myArray.push(letter);
+// 	}
+// 	return myArray;
+// }
+
+// console.log(vowels('I am a banana'));
+
+/* 8. Write a function called 'twins' which takes an array and  returns true if every adjacent pair
+of items in the array is the same. */
+
+// var twins = function(array){
+// 	var st1 ="";
+// 	var st2 ="";
+
+// 	for (i=0; i<array.length; i+=2){
+// 		st1+=array[i];
+// 	}
+
+// 	for (i=1; i<array.length; i+=2){
+// 		st2+=array[i];
+// 	}
+
+// 	if (st1===st2)
+// 		return true;
+// 	else
+// 		return false;
+// }
+
+// console.log(twins(['a', 'a', 'b', 'b', 'z', 'z']));
+// console.log(twins(['a', 'a', 'b', 'c', 'd', 'd']));
+
+/* 9. Write a function called 'or' which takes an array of booleans and returns true if
+any one of them is true. Given an empty array, return false. If you find an item that 
+is true, the function should return true immediately and not continue checking further values. */
+
+var or = function(myArray) {
+
+	for (pos in myArray){
+		if (myArray[pos]===true)
+			return true;
 	}
-	return myArray;
+
+	return false;
 }
 
-console.log(vowels('What evil odd ducks!'));
+console.log(or([false, false, true, false]) );
+console.log(or([false, false, false]));
+console.log(or([]));
+
+/* 10. Write a function called 'unique' which takes an array of strings, and returns 
+a new array consisting of the unique values (no duplicates). */ 
+
+var unique = function (myArray){
+	var returnArray = [];
+
+	for (var i = 0;i<myArray.length;i++){
+		if (returnArray.indexOf(myArray[i])==-1)
+			returnArray.push(myArray[i]);
+	}
+	return returnArray;
+}
+
+console.log(unique(['ilana', 'bill', 'bob', 'ilana']));
+console.log(unique(['a', 'b', 'a', 'c', 'd', 'd']) );
 
 /* 8. Write a function called 'twins' which takes an array and returns
 true if every adjacent pair of items in the array is the same. */
