@@ -1,16 +1,16 @@
 
 
-var reverseWord = ("I am a string that needs to be reversed");         
+// var reverseWord = ("I am a string that needs to be reversed");         
 
 
-function reverse(str) { 
+// function reverse(str) { 
 
- return str.split('').reverse().join('');    
+//  return str.split('').reverse().join('');    
 
-  return str;         
-}
+//   return str;         
+// }
    
-console.log(reverse(reverseWord))                        
+// console.log(reverse(reverseWord))                        
 
 
 // var swapCase = function(letters){
@@ -37,3 +37,5 @@ str1.replace(/\S/g, function(l){uchars[l] = (isNaN(uchars[l]) ? 1 : uchars[l] + 
 return uchars;  
 }  
 console.log(Char_Counts("The quick brown fox jumps over the lazy dog"));  
+
+//last function still needs work 
