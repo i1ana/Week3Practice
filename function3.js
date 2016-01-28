@@ -87,3 +87,9 @@ var vowels = function (str){
 
 console.log(vowels('What evil odd ducks!'));
 
+/* 8. Write a function called 'twins' which takes an array and returns
+true if every adjacent pair of items in the array is the same. */
+
+var twins = function 
+
+
