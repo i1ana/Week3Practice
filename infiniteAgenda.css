@@ -1,1 +1,17 @@
-.agenda 
+.agenda {
+
+	background-color: white;
+	font-size: 14px;
+	color: black;
+	font-family: 'Helvetica', sans-serif; 
+
+}
+
+.div {
+	border-style: thin, solid, black; 
+
+}
+
+.p {
+	font-weight: bold; 
+}

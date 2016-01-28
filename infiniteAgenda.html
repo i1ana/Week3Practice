@@ -4,12 +4,17 @@
   <link rel="stylesheet" type="text/css" href="infiniteAgenda.css">
   <title>Infinite Agenda</title>
 </head>
-<body ng-controller='agendaController'>
-
-<div class="container">
-
-	<div class="agenda">
-		<ul class="agenda-list" class="list-unstyled"></ul>
+<body ng-controller='agendaController' class="agenda">
+<div>
+	<h1>Infinite Agenda Week View </h1>
+	<div class="div">
+	<p class='p'>Today:</p>
+	{{ date_expression | date : format : timezone}}
+		<div>
+			<div ng-repeat = "dateRepeat">
+				
+			</div>
+		</div>
 	</div>
 
 </div>
