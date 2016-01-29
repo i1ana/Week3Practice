@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head ng-app = 'agenda'>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+<script type="text/javascript" src="infiniteAgenda.js"></script>
+
   <link rel="stylesheet" type="text/css" href="infiniteAgenda.css">
   <title>Infinite Agenda</title>
 </head>
 <body ng-controller='agendaController' class="agenda">
-<div>
-	<h1>Infinite Agenda Week View </h1>
-	<div class="div">
-	<p class='p'>Today:</p>
-	{{ date_expression | date : format : timezone}}
-		<div>
-			<div ng-repeat = "dateRepeat">
-				
-			</div>
-		</div>
+	<div>
+	<h1 class="header">Infinite Agenda Week View </h1>
 	</div>
+		<div class="bubble" ng-repeat = "days in weekDays()"> 
 
-</div>
+				<p class='p'>Today:</p>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
-<script type="text/javascript" src="infiniteAgenda.js"></script>
+					<div class="dayHeading">{{day.weekDays}} {{month.months}} {{year.year}} </div>
+
+					<div ng-repeat = "(key,value) in day.appointments"> </div>
+
+						<div ng-repeat = "(keyTime, type) in value">{{keyTime}}: {{type}}
+						</div>
+
+							<form>
+					<p> New Appointment: </p>
+					<input type="text">
+					</form>
+		
+			</div>
+	
+<!-- {{ date_expression | date : format : timezone}} -->
+
+
+
 
 </body>
 </html>

@@ -1,27 +1,26 @@
-angular.module('agenda', [])
-	
-	angular.module('agenda')
-		.controller('agendaController', ['$scope', function($scope){
+// Agenda.JS 
+angular.module('agenda',[]);
 
-			var agenda=$scope;
+angular.module('agenda')
+	.controller('agendaController',['$scope', function($scope){
 
-			agenda.today = Date();
-			agenda.dateObj = new Date();
-			console.log(agenda);
-				
-			for (key in agenda.dateObj){
-			console.log(key);
+var weekDays = {
+
+	Day1: 'Sunday',
+	Day2: 'Monday',
+	Day3: 'Tuesday',
+	Day4: 'Wednesday',
+	Day5: 'Thursday',
+	Day6: 'Friday',
+	Day7: 'Saturday'
+}
+
+var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+			$scope.date = function() {
+				 console.log("I am working")
 			}
-
-		console.log("date ",agenda.today);
-		console.log(typeof agenda.today);
-
-
-			
-
-
 
 
 
 }])
-
